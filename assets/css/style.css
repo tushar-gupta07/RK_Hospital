@@ -20587,3 +20587,1520 @@ a:hover {
         margin-bottom: 15px !important;
     }
 }
+
+
+/* ========================================
+   HEADER MOBILE RESPONSIVENESS FIX
+   Added: Feb 2026
+   Purpose: Fix red header getting cut/hidden on mobile
+   ======================================== */
+
+/* Ensure header top area is visible on all devices */
+/* ========== MOBILE RED HEADER FIX ========== */
+
+.header-one .header-top-area,
+.header-top-area {
+  background: var(--color-primary) !important;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  height: auto !important;
+}
+
+.header-one .header-top-area .header-top,
+.header-top-area .header-top {
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+@media only screen and (max-width: 991px) {
+  .header-one .header-top-area,
+  .header-top-area {
+    display: block !important;
+    padding: 12px 0 !important;
+    background: var(--color-primary) !important;
+  }
+  
+  .header-one .header-top-area .header-top,
+  .header-top-area .header-top {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 10px !important;
+    padding: 0 15px !important;
+  }
+  
+  .header-one .header-top-area .header-top .left,
+  .header-one .header-top-area .header-top .right,
+  .header-top-area .header-top .left,
+  .header-top-area .header-top .right {
+    display: flex !important;
+    width: 100% !important;
+    justify-content: center !important;
+    gap: 15px !important;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .header-one .header-top-area,
+  .header-top-area {
+    padding: 10px 0 !important;
+  }
+}
+       /* =================================
+   NAVBAR ALIGNMENT FIX - RK HOSPITAL
+================================= */
+
+/* Main header wrapper */
+.header-wrapper-1 {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 15px 0 !important;
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+/* Logo and nav container */
+.logo-area-start {
+    display: flex !important;
+    align-items: center !important;
+    gap: 40px !important;
+    flex: 1 !important;
+}
+
+/* Logo styling - SIZE CONTROL */
+.logo-area-start .logo {
+    display: inline-block !important;
+    flex-shrink: 0 !important;
+}
+
+.logo-area-start .logo img {
+    max-height: 70px !important;
+    width: auto !important;
+    display: block !important;
+    object-fit: contain !important;
+}
+
+/* Navigation area */
+.nav-area {
+    display: flex !important;
+    align-items: center !important;
+    flex: 1 !important;
+}
+
+.nav-area > ul {
+    display: flex !important;
+    align-items: center !important;
+    gap: 30px !important;
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.nav-area ul li {
+    position: relative;
+    list-style: none;
+}
+
+.nav-area ul li a {
+    color: #333333 !important;
+    font-weight: 600 !important;
+    font-size: 16px !important;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: inline-block;
+    padding: 10px 0;
+}
+
+.nav-area ul li a:hover {
+    color: #E31E24 !important;
+}
+
+/* Active menu */
+.nav-area ul li.active > a {
+    color: #E31E24 !important;
+}
+
+/* Header right section */
+.header-right {
+    display: flex !important;
+    align-items: center !important;
+    gap: 20px !important;
+}
+
+/* Appointment button */
+.header-right .rts-btn {
+    background-color: #E31E24 !important;
+    border: 2px solid #E31E24 !important;
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    padding: 12px 28px !important;
+    border-radius: 8px !important;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 12px rgba(227, 30, 36, 0.2);
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.header-right .rts-btn:hover {
+    background-color: #c91920 !important;
+    border-color: #c91920 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(227, 30, 36, 0.25);
+}
+
+.header-right .rts-btn img {
+    width: 16px;
+    height: 16px;
+}
+
+/* Mobile menu button */
+.menu-btn {
+    display: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+/* ========== DROPDOWN MENUS ========== */
+.submenu,
+.rts-mega-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 15px 0;
+    z-index: 999;
+    min-width: 220px;
+}
+
+.has-dropdown:hover .submenu,
+.mega-menu:hover .rts-mega-menu {
+    display: block;
+}
+
+.submenu li {
+    list-style: none;
+}
+
+.submenu li a {
+    display: block !important;
+    padding: 10px 25px !important;
+    color: #333333 !important;
+    font-weight: 500 !important;
+    transition: all 0.3s ease;
+}
+
+.submenu li a:hover {
+    background-color: rgba(227, 30, 36, 0.05);
+    color: #E31E24 !important;
+    padding-left: 30px !important;
+}
+
+/* Mega menu specific */
+.rts-mega-menu.with-add {
+    min-width: 800px;
+    padding: 30px;
+}
+
+.mega-menu-item {
+    list-style: none;
+    padding: 0;
+}
+
+.mega-menu-item li a {
+    display: flex !important;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 15px !important;
+    color: #333333 !important;
+    font-weight: 500 !important;
+    transition: all 0.3s ease;
+}
+
+.mega-menu-item li a:hover {
+    background-color: rgba(227, 30, 36, 0.05);
+    color: #E31E24 !important;
+}
+
+.mega-menu-item li a img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Menu add top area */
+.menu-add-top-area {
+    margin-bottom: 20px;
+}
+
+.menu-add-top-area .title {
+    color: #E31E24;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0;
+}
+
+/* ========== RESPONSIVE NAVBAR ========== */
+@media (max-width: 1200px) {
+    .nav-area > ul {
+        gap: 20px !important;
+    }
+    
+    .nav-area ul li a {
+        font-size: 15px !important;
+    }
+    
+    .logo-area-start .logo img {
+        max-height: 60px !important;
+    }
+}
+
+@media (max-width: 992px) {
+    .nav-area {
+        display: none !important;
+    }
+    
+    .menu-btn {
+        display: block !important;
+    }
+    
+    .logo-area-start .logo img {
+        max-height: 55px !important;
+    }
+    
+    .header-right .rts-btn {
+        padding: 10px 20px !important;
+        font-size: 14px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-wrapper-1 {
+        padding: 12px 0 !important;
+    }
+    
+    .logo-area-start .logo img {
+        max-height: 50px !important;
+    }
+    
+    .header-right {
+        gap: 12px !important;
+    }
+    
+    .header-right .rts-btn {
+        padding: 8px 16px !important;
+        font-size: 13px !important;
+    }
+}
+/* =================================
+   FOOTER - NO GAP FIX
+================================= */
+
+/* ========== MAIN FOOTER AREA ========== */
+.rts-footer-area {
+    background-color: #1a1a1a !important;
+    color: #ffffff !important;
+    padding: 80px 0 40px 0 !important;
+    margin-bottom: 0 !important; /* Remove bottom margin */
+}
+
+.rts-footer-area.footer-two {
+    padding-top: 105px !important;
+    padding-bottom: 0 !important; /* Remove bottom padding */
+    margin-bottom: 0 !important;
+}
+
+/* Subscribe area at top */
+.subscribe-area-start {
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.subscribe-area-start .logo img {
+    max-height: 60px;
+    filter: brightness(0) invert(1);
+}
+
+/* Subscribe input area */
+.subscribe-area {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.subscribe-area input {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    border: 2px solid rgba(255, 255, 255, 0.2) !important;
+    color: #ffffff !important;
+    padding: 14px 20px;
+    border-radius: 8px;
+    width: 300px;
+    font-weight: 500;
+}
+
+.subscribe-area input::placeholder {
+    color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.subscribe-area input:focus {
+    border-color: #E31E24 !important;
+    outline: none;
+}
+
+.subscribe-area button.rts-btn {
+    background-color: #E31E24 !important;
+    border: 2px solid #E31E24 !important;
+    color: #ffffff !important;
+    padding: 14px 32px !important;
+}
+
+.subscribe-area button.rts-btn:hover {
+    background-color: #c91920 !important;
+}
+
+/* Footer columns wrapper */
+.footer-wrapper-style-between {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    padding-bottom: 40px; /* Bottom padding */
+}
+
+/* Single footer widget */
+.single-wized {
+    flex: 1;
+}
+
+.single-wized h6.title {
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    font-size: 20px !important;
+    margin-bottom: 25px !important;
+    text-transform: uppercase;
+}
+
+.single-wized .body {
+    color: #cccccc !important;
+}
+
+.single-wized .body p,
+.single-wized .body p.location {
+    color: #cccccc !important;
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 12px;
+}
+
+.single-wized .body a {
+    color: #cccccc !important;
+    font-size: 15px;
+    font-weight: 400;
+    display: block;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.single-wized .body a:hover {
+    color: #E31E24 !important;
+}
+
+/* Footer navigation links */
+.nav-bottom {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-bottom li {
+    margin-bottom: 10px;
+}
+
+.nav-bottom li a {
+    color: #cccccc !important;
+    font-size: 15px;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+.nav-bottom li a:hover {
+    color: #E31E24 !important;
+}
+
+/* ========== COPYRIGHT AREA (NO GAP) ========== */
+.copyright-area {
+    background-color: #0d0d0d !important;
+    color: #999999 !important;
+    padding: 25px 0 !important;
+    margin-top: 0 !important; /* Remove top margin - KEY FIX */
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.copyright-area p,
+.copyright-area span {
+    color: #999999 !important;
+    font-size: 14px;
+    margin: 0 !important;
+}
+
+.copyright-area a {
+    color: #E31E24 !important;
+    font-weight: 500;
+}
+
+.copyright-area a:hover {
+    color: #c91920 !important;
+}
+
+/* Copyright inner wrapper */
+.copyright-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Footer social icons */
+.footer-social-area {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.footer-social-area a {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.footer-social-area a:hover {
+    background-color: #E31E24 !important;
+    color: #ffffff !important;
+}
+
+/* ========== REMOVE ALL GAPS ========== */
+.rts-footer-area + .copyright-area {
+    margin-top: 0 !important;
+}
+
+section:last-of-type {
+    margin-bottom: 0 !important;
+}
+
+/* ========== RESPONSIVE FOOTER ========== */
+@media (max-width: 992px) {
+    .footer-wrapper-style-between {
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+    
+    .single-wized {
+        flex-basis: calc(50% - 15px);
+    }
+    
+    .subscribe-area-start {
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    .rts-footer-area {
+        padding: 60px 0 30px 0 !important;
+    }
+    
+    .single-wized {
+        flex-basis: 100%;
+    }
+    
+    .subscribe-area {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .subscribe-area input {
+        width: 100%;
+    }
+    
+    .single-wized h6.title {
+        font-size: 18px !important;
+    }
+}
+/* =================================
+   ABOUT US + OUR SERVICES SECTIONS
+   RK Hospital Theme - Red + Blue Styling
+================================= */
+
+/* ========== ABOUT US SECTION ========== */
+.rts-about-area {
+    padding: 80px 0;
+    background-color: #ffffff;
+}
+
+/* About Us badge */
+.about-content-wrapper-right .title-wrapper-left .pre {
+    color: #E31E24 !important;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+/* About Us main heading */
+.about-content-wrapper-right .title-wrapper-left h2.title {
+    color: #005EB8 !important;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 1.3;
+    margin-bottom: 25px;
+}
+
+/* About Us description */
+.about-content-wrapper-right p.disc {
+    color: #666666;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+/* About Us button */
+.about-content-wrapper-right .rts-btn {
+    background-color: #E31E24 !important;
+    border: 2px solid #E31E24 !important;
+    color: #ffffff !important;
+}
+
+.about-content-wrapper-right .rts-btn:hover {
+    background-color: #c91920 !important;
+    border-color: #c91920 !important;
+}
+
+/* Review stars */
+.review-area .stars-area i {
+    color: #E31E24 !important;
+}
+
+.review-area .content span {
+    color: #005EB8;
+    font-weight: 600;
+}
+
+/* ========== COUNTER SECTION ========== */
+.rts-counter-area {
+    padding: 60px 0;
+}
+
+.counter-area-main-wrapper {
+    background-color: #f8f9fa;
+    border-radius: 15px;
+    padding: 50px 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.single-counter .title {
+    color: #005EB8 !important;
+    font-weight: 700;
+    font-size: 48px;
+}
+
+.single-counter p {
+    color: #333333;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+/* ========== WHY CHOOSE US SECTION ========== */
+.why-choose-us-area {
+    padding: 80px 0;
+}
+
+.why-choose-area-wrapper.bg-light {
+    background-color: #f8f9fa !important;
+}
+
+/* Why Choose Us badge */
+.why-choose-us-area-wrapper-main .title-wrapper-left .pre {
+    color: #E31E24 !important;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+/* Why Choose Us heading */
+.why-choose-us-area-wrapper-main .title-wrapper-left h2.title {
+    color: #005EB8 !important;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 1.3;
+    margin-bottom: 25px;
+}
+
+/* Why Choose Us description */
+.why-choose-us-area-wrapper-main .title-wrapper-left p.disc {
+    color: #666666;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* Single choose us card */
+.single-choose-us {
+    border-left: 4px solid #E31E24;
+    padding-left: 20px;
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+}
+
+.single-choose-us:hover {
+    transform: translateX(8px);
+}
+
+.single-choose-us .icon {
+    background-color: rgba(227, 30, 36, 0.08);
+    border-radius: 12px;
+    padding: 18px;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+}
+
+.single-choose-us:hover .icon {
+    background-color: rgba(227, 30, 36, 0.15);
+}
+
+.single-choose-us h6.title {
+    color: #333333;
+    font-weight: 600;
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+
+.single-choose-us p {
+    color: #666666;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* Feature card */
+.feature-bg-primary {
+    background-color: #005EB8 !important;
+    border-radius: 15px;
+    padding: 30px;
+}
+
+.feature-bg-primary .inner-content .title {
+    color: #ffffff !important;
+    font-weight: 700;
+}
+
+.inner-content .call-us {
+    background-color: #E31E24 !important;
+    color: #ffffff !important;
+    font-weight: 700;
+    border-radius: 30px;
+    padding: 12px 25px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* ========== LAB TEST SECTION ========== */
+.lab-test-area {
+    padding: 80px 0;
+}
+
+/* Lab test section title */
+.title-six-center h2.title {
+    color: #005EB8 !important;
+    font-weight: 700;
+    font-size: 42px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+/* Single lab test card */
+.single-lab-test {
+    border: 2px solid #e8e8e8;
+    border-radius: 15px;
+    padding: 30px;
+    background-color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.single-lab-test:hover {
+    border-color: #E31E24;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.single-lab-test h3.title {
+    color: #005EB8 !important;
+    font-weight: 700;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.single-lab-test-service p {
+    color: #333333;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.single-lab-test h5.price {
+    color: #E31E24 !important;
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.single-lab-test h5.price i {
+    color: #E31E24 !important;
+}
+
+/* Background variations */
+.single-lab-test.bg-pink {
+    background-color: rgba(227, 30, 36, 0.03);
+}
+
+.single-lab-test.bg-green {
+    background-color: rgba(0, 94, 184, 0.03);
+}
+
+.single-lab-test.bg-light-card {
+    background-color: #f8f9fa;
+}
+
+/* ========== TEAM SECTION ========== */
+.team-area-start {
+    padding: 80px 0;
+}
+
+.team-style-wrapper.bg-light {
+    background-color: #f8f9fa !important;
+}
+
+/* Team section title */
+.team-style-wrapper .title-wrapper-left h2.title {
+    color: #005EB8 !important;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 1.3;
+}
+
+.team-style-wrapper .title-wrapper-left p.disc {
+    color: #666666;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* Single team card */
+.single-team-area-start {
+    border: 2px solid #e8e8e8;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.single-team-area-start:hover {
+    border-color: #E31E24;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.single-team-area-start .bottom h6.title {
+    color: #333333;
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.single-team-area-start .bottom p {
+    color: #E31E24 !important;
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.single-team-area-start .social-area-tranaparent ul li a {
+    width: 36px;
+    height: 36px;
+    background-color: rgba(227, 30, 36, 0.08);
+    color: #E31E24 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.single-team-area-start .social-area-tranaparent ul li a:hover {
+    background-color: #E31E24 !important;
+    color: #ffffff !important;
+}
+
+/* ========== TESTIMONIALS SECTION ========== */
+.rts-testimonials-area {
+    padding: 80px 0;
+}
+
+.rts-testimonials-area .title-area-center h2.title {
+    color: #005EB8 !important;
+    font-weight: 700;
+    font-size: 42px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.single-testimonials-style {
+    border: 2px solid #e8e8e8;
+    border-radius: 12px;
+    background-color: #ffffff;
+    padding: 30px;
+    transition: all 0.3s ease;
+}
+
+.single-testimonials-style:hover {
+    border-color: #E31E24;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.single-testimonials-style .stars-area i {
+    color: #E31E24 !important;
+}
+
+.single-testimonials-style h6.name {
+    color: #333333;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.single-testimonials-style p.disc {
+    color: #666666;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/* ========== HOSPITAL BRANCH SECTION ========== */
+.rts-hospital-branch {
+    padding: 80px 0;
+}
+
+.rts-hospital-branch .title-wrapper-left .pre {
+    color: #E31E24 !important;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.rts-hospital-branch .title-wrapper-left h2.title {
+    color: #005EB8 !important;
+    font-weight: 700;
+    font-size: 42px;
+}
+
+.single-hospitalbranch {
+    border: 2px solid #e8e8e8;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.single-hospitalbranch:hover {
+    border-color: #E31E24;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.single-hospitalbranch h5.title {
+    color: #005EB8 !important;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.single-hospitalbranch .stars-area i {
+    color: #E31E24 !important;
+}
+
+.single-hospitalbranch .bottom-area-start .right span {
+    color: #E31E24;
+    font-weight: 600;
+}
+
+/* ========== FAQ SECTION ========== */
+.rts-faq-area {
+    padding: 80px 0;
+}
+
+.rts-faq-area .title-six-center h2.title {
+    color: #005EB8 !important;
+    font-weight: 700;
+    font-size: 42px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.accordion-item {
+    border: 2px solid #e8e8e8;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.accordion-button {
+    color: #333333 !important;
+    font-weight: 600;
+    font-size: 17px;
+    background-color: #ffffff;
+}
+
+.accordion-button:not(.collapsed) {
+    color: #E31E24 !important;
+    background-color: rgba(227, 30, 36, 0.05);
+}
+
+.accordion-button:focus {
+    border-color: #E31E24;
+    box-shadow: 0 0 0 0.25rem rgba(227, 30, 36, 0.1);
+}
+
+.accordion-body {
+    color: #666666;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/* ========== CTA / REQUEST APPOINTMENT ========== */
+.request-appoinemnt-area-main-wrapper {
+    background: linear-gradient(135deg, #005EB8 0%, #004a94 100%) !important;
+    border-radius: 15px;
+    padding: 60px 50px;
+    text-align: center;
+}
+
+.request-appoinemnt-area-main-wrapper span.pre {
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 600;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.request-appoinemnt-area-main-wrapper h2.title {
+    color: #ffffff !important;
+    font-weight: 700;
+    font-size: 48px;
+    margin: 15px 0 30px 0;
+}
+
+.request-appoinemnt-area-main-wrapper .rts-btn {
+    background-color: #E31E24 !important;
+    border: 2px solid #E31E24 !important;
+}
+
+.request-appoinemnt-area-main-wrapper .rts-btn:hover {
+    background-color: #ffffff !important;
+    color: #E31E24 !important;
+    border-color: #ffffff !important;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 992px) {
+    .about-content-wrapper-right .title-wrapper-left h2.title,
+    .why-choose-us-area-wrapper-main .title-wrapper-left h2.title,
+    .title-six-center h2.title,
+    .team-style-wrapper .title-wrapper-left h2.title {
+        font-size: 36px !important;
+    }
+    
+    .counter-area-main-wrapper {
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+    
+    .single-counter {
+        flex-basis: calc(50% - 15px);
+    }
+}
+
+@media (max-width: 768px) {
+    .about-content-wrapper-right .title-wrapper-left h2.title,
+    .why-choose-us-area-wrapper-main .title-wrapper-left h2.title,
+    .title-six-center h2.title,
+    .team-style-wrapper .title-wrapper-left h2.title {
+        font-size: 28px !important;
+    }
+    
+    .single-counter {
+        flex-basis: 100%;
+        text-align: center;
+    }
+    
+    .request-appoinemnt-area-main-wrapper {
+        padding: 40px 30px;
+    }
+    
+    .request-appoinemnt-area-main-wrapper h2.title {
+        font-size: 32px !important;
+    }
+}
+/* =================================
+   CONTACT PAGE - CLEAN PROFESSIONAL DESIGN
+================================= */
+
+/* =================================
+   CONTACT PAGE FORM - WHITE CLEAN DESIGN
+   Exactly like banner appointment form
+================================= */
+/* =================================
+   CONTACT FORM - PURPLE GRADIENT DESIGN
+   Exactly like banner appointment form
+================================= */
+
+/* ========== CONTACT FORM CONTAINER (PURPLE GRADIENT) ========== */
+.appoinment-area-main.contact-page,
+.appoinment-area-main {
+    background: linear-gradient(135deg, #6B5FED 0%, #8B7FFF 100%) !important; /* Purple gradient */
+    border: none !important;
+    border-radius: 20px !important;
+    padding: 50px 45px !important;
+    box-shadow: 0 15px 50px rgba(107, 95, 237, 0.3) !important;
+}
+
+/* Form heading - WHITE */
+.appoinment-area-main h2.title,
+.appoinment-area-main h3.title {
+    color: #ffffff !important; /* White heading */
+    font-weight: 800 !important;
+    font-size: 42px !important;
+    margin-bottom: 35px !important;
+    text-align: left !important;
+    text-transform: capitalize !important;
+}
+
+/* ========== WHITE ROUNDED INPUTS ========== */
+.appoinment-area-main input[type="text"],
+.appoinment-area-main input[type="email"],
+.appoinment-area-main input[type="tel"],
+.appoinment-area-main textarea {
+    width: 100% !important;
+    border: none !important;
+    background-color: #ffffff !important; /* Pure white */
+    color: #333333 !important;
+    font-weight: 500 !important;
+    font-size: 15px !important;
+    border-radius: 50px !important; /* Full rounded */
+    padding: 16px 28px !important;
+    margin-bottom: 20px !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Input focus state */
+.appoinment-area-main input:focus,
+.appoinment-area-main textarea:focus {
+    outline: none !important;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12) !important;
+    transform: translateY(-2px);
+}
+
+/* Placeholder styling */
+.appoinment-area-main input::placeholder,
+.appoinment-area-main textarea::placeholder {
+    color: #999999 !important;
+    font-weight: 400 !important;
+}
+
+/* ========== HALF INPUT WRAPPER (Two columns) ========== */
+.half-input-wrapper {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 20px !important;
+    margin-bottom: 20px !important;
+}
+
+/* ========== TEXTAREA (LESS ROUNDED) ========== */
+.appoinment-area-main textarea {
+    border-radius: 25px !important; /* Less rounded for textarea */
+    min-height: 150px !important;
+    resize: vertical !important;
+    font-family: inherit !important;
+}
+
+/* ========== SELECT DROPDOWNS (TRANSPARENT PURPLE) ========== */
+.appoinment-area-main .nice-select,
+.appoinment-area-main select {
+    width: 100% !important;
+    border: 2px solid rgba(255, 255, 255, 0.3) !important;
+    background-color: transparent !important; /* Transparent background */
+    color: #ffffff !important;
+    font-weight: 600 !important;
+    font-size: 15px !important;
+    border-radius: 50px !important;
+    padding: 16px 28px !important;
+    margin-bottom: 20px !important;
+    transition: all 0.3s ease !important;
+    height: auto !important;
+    line-height: normal !important;
+}
+
+.appoinment-area-main .nice-select .current {
+    color: #ffffff !important; /* White text */
+    font-weight: 600 !important;
+}
+
+.appoinment-area-main .nice-select:after {
+    border-color: #ffffff !important;
+    right: 28px !important;
+}
+
+.appoinment-area-main .nice-select:hover,
+.appoinment-area-main .nice-select.open {
+    border-color: rgba(255, 255, 255, 0.6) !important;
+    background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Dropdown list - WHITE */
+.appoinment-area-main .nice-select .list {
+    background-color: #ffffff !important;
+    border: none !important;
+    border-radius: 15px !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15) !important;
+    width: 100% !important;
+}
+
+.appoinment-area-main .nice-select .list .option {
+    color: #333333 !important;
+    padding: 12px 28px !important;
+    transition: all 0.3s ease !important;
+}
+
+.appoinment-area-main .nice-select .list .option:hover,
+.appoinment-area-main .nice-select .list .option.selected {
+    background-color: rgba(107, 95, 237, 0.1) !important;
+    color: #6B5FED !important;
+}
+
+/* ========== SUBMIT BUTTON - TEAL/CYAN ========== */
+.appoinment-area-main .rts-btn.btn-primary,
+.appoinment-area-main .rts-btn,
+.appoinment-area-main a.rts-btn {
+    background-color: #00A3A3 !important; /* Teal/Cyan button */
+    border: none !important;
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    font-size: 16px !important;
+    padding: 16px 45px !important;
+    border-radius: 50px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    margin-top: 15px !important;
+    transition: all 0.3s ease !important;
+    cursor: pointer !important;
+    box-shadow: 0 6px 20px rgba(0, 163, 163, 0.3) !important;
+}
+
+.appoinment-area-main .rts-btn:hover {
+    background-color: #008888 !important;
+    transform: translateY(-3px) !important;
+    box-shadow: 0 8px 25px rgba(0, 163, 163, 0.4) !important;
+}
+
+/* Button icon */
+.appoinment-area-main .rts-btn img {
+    width: 18px !important;
+    height: 18px !important;
+    filter: brightness(0) invert(1); /* White icon */
+}
+
+/* ========== SEARCH INPUT CONTAINER ========== */
+.search-input {
+    display: flex !important;
+    gap: 20px !important;
+    margin-bottom: 20px !important;
+}
+
+.search-input .nice-select {
+    flex: 1 !important;
+    margin-bottom: 0 !important;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 992px) {
+    .appoinment-area-main {
+        padding: 40px 30px !important;
+    }
+    
+    .appoinment-area-main h2.title,
+    .appoinment-area-main h3.title {
+        font-size: 36px !important;
+    }
+    
+    .half-input-wrapper {
+        grid-template-columns: 1fr !important;
+        gap: 0 !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .appoinment-area-main {
+        padding: 35px 25px !important;
+    }
+    
+    .appoinment-area-main h2.title,
+    .appoinment-area-main h3.title {
+        font-size: 30px !important;
+    }
+    
+    .search-input {
+        flex-direction: column !important;
+        gap: 0 !important;
+    }
+    
+    .search-input .nice-select {
+        margin-bottom: 20px !important;
+    }
+}
+
+
+/* ========== FOOTER - FIXED ========== */
+.rts-footer-area {
+    background-color: #1a1a1a !important;
+    color: #ffffff !important;
+    padding: 80px 0 0 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.rts-footer-area.footer-two {
+    padding-top: 105px !important;
+    padding-bottom: 40px !important;
+}
+
+/* Subscribe area at top */
+.subscribe-area-start {
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.subscribe-area-start .logo img {
+    max-height: 60px;
+    filter: brightness(0) invert(1);
+}
+
+/* Subscribe input area */
+.subscribe-area {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.subscribe-area input {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    border: 2px solid rgba(255, 255, 255, 0.2) !important;
+    color: #ffffff !important;
+    padding: 14px 20px;
+    border-radius: 8px;
+    width: 300px;
+    font-weight: 500;
+}
+
+.subscribe-area input::placeholder {
+    color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.subscribe-area input:focus {
+    border-color: #E31E24 !important;
+    outline: none;
+}
+
+.subscribe-area button.rts-btn {
+    background-color: #E31E24 !important;
+    border: 2px solid #E31E24 !important;
+    color: #ffffff !important;
+    padding: 14px 32px !important;
+}
+
+.subscribe-area button.rts-btn:hover {
+    background-color: #c91920 !important;
+}
+
+/* Footer columns wrapper */
+.footer-wrapper-style-between {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    padding-bottom: 40px;
+}
+
+/* Single footer widget */
+.single-wized {
+    flex: 1;
+}
+
+.single-wized h6.title {
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    font-size: 20px !important;
+    margin-bottom: 25px !important;
+    text-transform: uppercase;
+}
+
+.single-wized .body {
+    color: #cccccc !important;
+}
+
+.single-wized .body p,
+.single-wized .body p.location {
+    color: #cccccc !important;
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 12px;
+}
+
+.single-wized .body a {
+    color: #cccccc !important;
+    font-size: 15px;
+    font-weight: 400;
+    display: block;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.single-wized .body a:hover {
+    color: #E31E24 !important;
+}
+
+/* Footer navigation links */
+.nav-bottom {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-bottom li {
+    margin-bottom: 10px;
+}
+
+.nav-bottom li a {
+    color: #cccccc !important;
+    font-size: 15px;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+.nav-bottom li a:hover {
+    color: #E31E24 !important;
+}
+
+/* ========== COPYRIGHT AREA (NO GAP) ========== */
+.copyright-area {
+    background-color: #0d0d0d !important;
+    color: #999999 !important;
+    padding: 25px 0 !important;
+    margin-top: 0 !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.copyright-area p,
+.copyright-area span {
+    color: #999999 !important;
+    font-size: 14px;
+    margin: 0 !important;
+}
+
+.copyright-area a {
+    color: #E31E24 !important;
+    font-weight: 500;
+}
+
+.copyright-area a:hover {
+    color: #c91920 !important;
+}
+
+/* Copyright inner wrapper */
+.copyright-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 992px) {
+    .half-input-wrapper {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    
+    .appoinment-area-main.contact-page {
+        padding: 40px 30px;
+    }
+    
+    .footer-wrapper-style-between {
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+    
+    .single-wized {
+        flex-basis: calc(50% - 15px);
+    }
+    
+    .subscribe-area-start {
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    .appoinment-area-main.contact-page {
+        padding: 35px 25px;
+    }
+    
+    .appoinment-area-main.contact-page h2.title {
+        font-size: 28px;
+    }
+    
+    .single-wized {
+        flex-basis: 100%;
+    }
+    
+    .subscribe-area {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .subscribe-area input {
+        width: 100%;
+    }
+}
+/* Serive-details */
